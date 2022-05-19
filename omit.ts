@@ -10,7 +10,7 @@ const getIndex = (value: string, subtractions: number[]) => {
     : undefined;
 };
 
-export function omit(obj: object | [] | undefined, paths: string[] | undefined = []) {
+export const omit = (obj: object | [] | undefined, paths: string[] | undefined = []) => {
   if (!obj || !paths) {
     return undefined;
   }
@@ -49,4 +49,4 @@ export function omit(obj: object | [] | undefined, paths: string[] | undefined =
 
     return acc;
   }, obj);
-}
+};
